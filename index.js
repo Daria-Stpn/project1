@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
+app.set("view engine", "ejs");
+app.set("views", "views");
 
 app.use(express.static("static"));
 app.use(express.json());
 let products = [];
 
 app.get("/", (req, res) => {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.sendFile("index.html");
+    res.render("index", { products: products })
 });
 
 app.post("/add", (req, res) => {
@@ -25,7 +26,7 @@ app.post("/ads", (req, res) => {
 
 app.use((req, res, next) => {
     res.status(404);
-    res.sendFile("notFound.html", { root: "static" });
+    res.render("notFound");
 });
 
 app.listen(3000, () => {
