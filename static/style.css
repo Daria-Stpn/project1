@@ -1,0 +1,51 @@
+:root {
+    --primary-100: #2563eb;
+    --primary-200: #598ef3;
+    --primary-300: #d3e6fe;
+    --accent-100: #d946ef;
+    --accent-200: #fae8ff;
+    --text-100: #cbd5e1;
+    --text-200: #94a3b8;
+    --bg-100: #1e293b;
+    --bg-200: #334155;
+    --bg-300: #475569;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: auto;
+    width: fit-content;
+}
+
+body{
+    background-color: var(--bg-100);
+    color: var(--text-100);
+}
+header{
+    padding: 2rem;
+    background-color: var(--bg-200);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.wrapper {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}

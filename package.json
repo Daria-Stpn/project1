@@ -1,0 +1,16 @@
+{
+  "name": "lesson-2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Daria",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
+
