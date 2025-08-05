@@ -49,3 +49,15 @@ header{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
 }
+
+#image {
+    display: none;
+}
+
+.image-label {
+    background-color: var(--primary-100);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}

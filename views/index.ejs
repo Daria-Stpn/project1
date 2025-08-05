@@ -7,14 +7,15 @@
             <main>
                 <div class="wrapper">
                     <% products.forEach((product)=> { -%>
-                        <div class="ad">
+                        <a href="/post/<%= product.id %>" class="ad">
                             <h3>
                                 <%= product.title %>
                             </h3>
+                            <img src="/uploads/<%= product.image[0] %>" alt="Зображення" />
                             <p>
                                 <%= product.description %>
                             </p>
-                        </div>
+                        </a>
                         <% }); -%>
                 </div>
                 <%- include('modal.ejs') -%>
