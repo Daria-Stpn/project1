@@ -1,0 +1,26 @@
+@function calculateSpacing($base, $multiplier) {
+    $spacing: ();
+    @for $i from 1 through $multiplier {
+        $value: $base * $i;
+        @if $value > 50 {
+            $value: 50;
+        }
+        $spacing: append($spacing, $value);
+    }
+    @return $spacing;
+}
+
+@function pow($number, $exponent) {
+    $result: 1;
+    @for $i from 1 through $exponent {
+        $result: $result * $number;
+    }
+    @return $result;
+}
+
+@function randomColor() {
+    $r: random(255);
+    $g: random(255);
+    $b: random(255);
+    @return rgb($r, $g, $b);
+}

@@ -7,11 +7,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "node app.js",
+    "sass": "sass --watch styles/style.scss:static/style.css",
+    "dev": "concurrently \"npm run sass\" nodemon app.js"
   },
   "dependencies": {
+    "concurrently": "^9.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "multer": "^2.0.2"
+    "multer": "^2.0.2",
+    "sass": "^1.90.0"
   }
 }

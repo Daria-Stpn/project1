@@ -1,0 +1,50 @@
+@use "./base/functions" as f;
+
+@import "./base/color";
+@import "./base/typography";
+@import "./base/clearDefault";
+@import"./base/mixins";
+@import "./components/modal";
+@import "./post";
+
+@debug f.calculateSpacing(10, 10);
+@debug f.pow(2, 3);
+@debug f.randomColor();
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body{
+    background-color: $bg-100;
+    color: $text-100;
+}
+header{
+    padding: 2rem;
+    background-color: $bg-200;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.wrapper {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+#image {
+    display: none;
+}
+
+.image-label {
+    background-color: $primary-100;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
