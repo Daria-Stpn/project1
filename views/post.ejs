@@ -17,6 +17,8 @@
                         
                 </div>
             </main>
+            <%- include('PostForm.ejs') -%>
+            <%- include('commentList.ejs', {comments: product.comments}) -%>
             <%- include('footer.ejs') -%>
     </body>
 </html>

@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "concurrently": "^9.2.0",
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "multer": "^2.0.2",
+    "mysql2": "^3.14.3",
     "sass": "^1.90.0"
   }
 }
